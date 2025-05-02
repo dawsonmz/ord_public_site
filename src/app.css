@@ -1,1 +1,15 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+html,
+body {
+  background-color: black;
+  color: #ef7a33;
+  font-family: "Oswald", sans-serif;
+}
+
+a {
+  &:hover {
+    color: #ffcc4d;
+    text-decoration: underline;
+  }
+}
