@@ -7,24 +7,11 @@
   function handleClick() {
     show = !show;
   }
-
-  $: menuClasses = `p-4 fixed top-0 right-0 w-screen h-screen bg-orange-500 transform transition-transform duration-500 md:hidden ${
-    show ? "translate-x-0" : "translate-x-full"
-  }`;
 </script>
 
 <header class="flex justify-between m-4 items-center">
   <!-- Mobile Sliding Menu -->
-  <div class={menuClasses} role="dialog" aria-modal="true">
-    <button
-      aria-label="Close menu"
-      class="fixed top-8 right-4 p-3 text-black text-xl transition"
-      on:click={handleClick}
-    >
-      <i class="fas fa-xmark fa-xl"></i>
-    </button>
-    <Megamenu on:close={() => (show = false)} />
-  </div>
+  <Megamenu {show} on:close={() => (show = false)} />
 
   <!-- Logo -->
   <img src={logo} alt="Logo of a woman in a helmet" class="w-24 h-24" />
