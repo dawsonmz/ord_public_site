@@ -2,7 +2,7 @@
   import logo from "$lib/assets/ord-logo.svg";
   import Megamenu from "./megamenu.svelte";
 
-  let show = false;
+  let show = $state(false);
 
   function handleClick() {
     show = !show;
@@ -11,14 +11,14 @@
 
 <header class="flex justify-between m-4 items-center">
   <!-- Mobile Sliding Menu -->
-  <Megamenu {show} on:close={() => (show = false)} />
+  <Megamenu {show} {handleClick} />
 
   <!-- Logo -->
   <img src={logo} alt="Logo of a woman in a helmet" class="w-24 h-24" />
 
   <!-- Mobile Menu Toggle Button -->
   <button
-    on:click={handleClick}
+    onclick={handleClick}
     aria-label="Open menu"
     aria-expanded={show}
     class="md:hidden {show ? 'hidden' : ''}"
