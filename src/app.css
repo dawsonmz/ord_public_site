@@ -9,7 +9,11 @@ body {
 
 a {
   &:hover {
-    color: #ffcc4d;
     text-decoration: underline;
   }
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
