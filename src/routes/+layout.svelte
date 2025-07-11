@@ -6,6 +6,6 @@
 </script>
 
 <Header />
-<main>
+<main class="mx-20">
   {@render children()}
 </main>
