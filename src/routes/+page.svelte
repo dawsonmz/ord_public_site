@@ -1,9 +1,12 @@
 <script>
   import hero from "$lib/assets/heroImage.png";
+  import ohOslo from "$lib/assets/OhOhOslo.png";
+  import sponserCode from "$lib/assets/GrasrotQR.png";
 </script>
 
 <section
-  class="flex flex-col lg:flex-row lg:gap-4 justify-between lg:max-w-[1090px]"
+  id="hero_section"
+  class="px-10 xl:px-0 flex flex-col lg:flex-row lg:gap-4 justify-between lg:max-w-[1090px]"
 >
   <img
     class="hidden lg:block lg:w-100"
@@ -33,9 +36,46 @@
   </div>
 </section>
 
+<section
+  class="my-14 text-black lg:flex justify-between px-10 lg:px-30 py-4 lg:py-10"
+  style="background-color: #FFCB4D;"
+>
+  <div>
+    <h2 class="text-2xl lg:text-4xl">Eventkalender</h2>
+  </div>
+  <div>
+    <img class="hidden lg:block" src={ohOslo} alt="CTA text Oslo team chant" />
+  </div>
+</section>
+
+<section class="text-white mx-10 mb-14">
+  <div class="flex flex-col lg:flex-row gap-9">
+    <div class="flex gap-4">
+      <img src={sponserCode} alt="QR code to sponsor Oslo Roller Derby" />
+      <div>
+        <h3 class="text-2xl">Støtt oss med din grasrotandel</h3>
+        <p class="mt-2">
+          Du kan bli grasrotgiver i alle Norsk Tippings kanaler eller ved å
+          sende SMS “Grasrotandelen 997503465” til 600000
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-2xl">Vil du bli sponsor?</h3>
+      <p class="mt-2">
+        Ønsker du å støtte klubben og samtidig få med logo på kamper og andre
+        arrangementer? Send oss en mail til <a
+          href="mailto:spons@oslorollerderby.no"
+          class="text-[#EF7A33]">spons@oslorollerderby.no</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
+
 <style>
-  section {
+  #hero_section {
     margin: 0 auto;
-    margin-top: 80px;
   }
 </style>
