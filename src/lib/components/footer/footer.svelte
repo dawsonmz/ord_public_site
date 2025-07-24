@@ -3,7 +3,7 @@
   import instaIcon from "$lib/assets/insta.png";
 </script>
 
-<footer class="flex justify-between">
+<footer>
   <p>&copy; 2023 Oslo Roller Derby Klubb</p>
   <div class="flex">
     <a aria-label="link to facebook" href="/">
@@ -14,3 +14,16 @@
     </a>
   </div>
 </footer>
+
+<style>
+  footer {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 10px 20px;
+
+    a:first-child {
+      margin-right: 10px;
+    }
+  }
+</style>
