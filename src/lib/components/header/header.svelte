@@ -9,7 +9,7 @@
   }
 </script>
 
-<header class="flex justify-between m-4 items-center">
+<header class="flex justify-between m-8 items-center">
   <!-- Mobile Sliding Menu -->
   <Megamenu {show} {handleClick} />
 
